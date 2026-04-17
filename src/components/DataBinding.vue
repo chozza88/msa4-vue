@@ -22,6 +22,8 @@ const info = reactive({
 console.log(info.name);
 
 const color = ref("red");
+
+console.log(color.value);
 function btnToggle() {
   if (color.value === "red") {
     color.value = "blue";
@@ -33,9 +35,9 @@ function btnToggle() {
 const id = ref("");
 
 function addTask() {
-  const task = reactive({
-    id: id,
-  });
+  const task = {
+    id: id.value,
+  };
 
   console.log(task.id);
 }
