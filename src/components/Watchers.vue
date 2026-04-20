@@ -32,7 +32,7 @@ watch(pw, () => {
     <span v-if="flgEmail">O</span>
     <span v-else-if="!flgEmail">X</span>
   </div>
-  <input type="text" v-model="email" />
+  <input type="text" :value="email" @input="(e) => (email = e.target.value)" />
   <input type="text" v-model="pw" :class="pwClass" />
 </template>
 
